@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #48A30012;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    padding: 0 16px 32px;
+}
+
+.title{
+    font-size: 64px;
+    text-align: center;
+    color:#48A300
+}
+.title span{
+    color: #61481C;
+}
+
+.app-container{
+    background-color: #FBFBFB;
+    max-width: 660px;
+    border-radius: 15px;
+    margin-inline: auto;
+    padding: 32px 48px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.sun-icon{
+    vertical-align: middle;
+    margin-left: 16px;
+}
+.rotating-sun{
+    animation: rotate 5s infinite linear;
+    width: 100px;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+.label{
+    color: #858585;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.progress-bar{
+    max-width: 574px;
+    height: 30px;
+    margin-bottom: 42px;
+    border-radius: 15px;
+    background-color: #48A3001A;
+}
+.progress-value{
+    width: 0px;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #48a300;
+    font-weight: 500;
+    font-size: 10px;
+    color: #EEFFE0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+    transition: width 0.2s ease-in-out;
+}
+.progress-value span{
+    padding-left: 20px;
+    min-width: max-content;
+}
+
+.error-write{
+    font-size: 12px;
+    display: none;
+    color: #FF5151;
+    margin-top: 4px;
+}
+.show-error .error-write{
+    display: block;
+}
+
+.box{
+    height: 62px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+    background-color: #FFFFFF;
+    border: 1px solid #0000001A;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 46px;
+}
+.ellipes{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #61481C4D;
+    color: #61481C4D;
+    background-color: #FFFFFF;
+    flex-shrink: 0;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.goal-input{
+    margin-left: 22px;
+    font-family: inherit;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    align-self: stretch;
+    flex-grow: 1;
+}
+.goal-input::placeholder{
+    color: #D9D9D9;
+}
+
+.code{
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+}
+
+.madeBy{
+    font-weight: 500;
+    font-size: 10px;
+    text-align: center;
+    color: #858585;
+    margin-top: 64px;
+}
+
+.completed .ellipes{
+    background-color: #48A300;
+    border-color: #48A300;
+}
+.completed .Vector1{
+    display: block;
+}
+.completed .goal-input{
+    color: #48A300;
+    text-decoration-line: line-through;
+}
+
+@media (max-width: 768px) {
+    .title{
+        font-size: 32px;
+    }
+    .app-container{
+        padding: 16px 32px;
+    }
+    .box{
+        height: 62px;
+        margin-bottom: 24px;
+    }
+}
